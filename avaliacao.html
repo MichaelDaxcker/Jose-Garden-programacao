@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Adriano Garden</title>
+  <link rel="stylesheet" href="css/Estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="inicio.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="text">Início</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="trabalhos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-tree"></i>
+                        </span>
+                        <span class="text">Trabalhos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="sobreNos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+                        <span class="text">Sobre Nós</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="contactos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span class="text">Contactos</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="avaliacao.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </span>
+                        <span class="text">Avaliação</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="loja.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-shop"></i>
+                        </span>
+                        <span class="text">Loja</span>
+                    </a>
+                </li>
+                <li class="list login-button">
+                    <a href="login.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </span>
+                        <span class="text">Iniciar Sessão</span>
+                    </a>
+                </li>
+            </ul>
+           <ul class="avaliacao">
+      <li class="star-icon ativo" data-avaliacao="1"></li>
+      <li class="star-icon" data-avaliacao="2"></li>
+      <li class="star-icon" data-avaliacao="3"></li>
+      <li class="star-icon" data-avaliacao="4"></li>
+      <li class="star-icon" data-avaliacao="5"></li>
+    </ul>
+            <div class="indicator"></div>
+        </div>
+        <div class="home">
+            <h1>Avaliação</h1>
+        </div>
+    </div>
+
+    <section class="avaliacao-comentario">
+      <h2>Deixe sua avaliação e comentário</h2>
+      <div class="avaliacao-estrelas">
+        <span class="star" data-avaliacao="1">&#9733;</span>
+        <span class="star" data-avaliacao="2">&#9733;</span>
+        <span class="star" data-avaliacao="3">&#9733;</span>
+        <span class="star" data-avaliacao="4">&#9733;</span>
+        <span class="star" data-avaliacao="5">&#9733;</span>
+      </div>
+      <p id="textoAvaliacao">Clique em uma estrela para avaliar.</p>
+      <label class="campo-avaliacao" for="nomeAvaliador">Nome</label>
+      <input id="nomeAvaliador" class="nome-avaliador" type="text" placeholder="Escreva o seu nome..." autocomplete="name">
+      <textarea id="comentario" placeholder="Escreva seu comentário..."></textarea>
+            <div style="display:flex;gap:0.5rem;justify-content:center;">
+                <button id="enviarAvaliacao" type="button">Enviar avaliação</button>
+            </div>
+            <p id="resultadoAvaliacao" class="resultado-avaliacao"></p>
+    </section>
+
+    <section class="avaliacoes-lista">
+      <h2>Comentários recentes</h2>
+      <div id="listaAvaliacoes"></div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

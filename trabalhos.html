@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Adriano Garden</title>
+  <link rel="stylesheet" href="css/Estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="inicio.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="text">Início</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="trabalhos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-tree"></i>
+                        </span>
+                        <span class="text">Trabalhos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="sobreNos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+                        <span class="text">Sobre Nós</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="contactos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span class="text">Contactos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="avaliacao.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </span>
+                        <span class="text">Avaliação</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="loja.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-shop"></i>
+                        </span>
+                        <span class="text">Loja</span>
+                    </a>
+                </li>
+                <li class="list login-button">
+                    <a href="login.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </span>
+                        <span class="text">Iniciar Sessão</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="indicator"></div>
+        </div>
+        <div class="home">
+            <h1>Trabalhos</h1>
+        </div>
+    </div>
+    <div class="galeria-secao">
+    <h2 class="digitacao">Nossa Galeria de Trabalhos 🌴</h2>
+    <div class="galeria-grid">
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/trabalhos1.jpg" alt="">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/trabalhos2.jpg" alt="">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/trabalhos3.jpg" alt="">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/trabalhos4.jpg" alt="">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/trabalhos5.jpg" alt="">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/trabalhos6.jpg" alt="Trabalho 6">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/foto trabalhos 1.jpg" alt="">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="galeria-item" onclick="abrirModal(this)">
+            <img src="imagens/fotos trabalhos 3.jpg" alt="">
+            <div class="galeria-overlay">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="video-secao">
+    <h2>Vídeo Proporcional 🌴</h2>
+    <div class="video-container">
+        <video src="imagens/Video proporcional.mp4" controls></video>
+    </div>
+</section>
+
+<section class="servicos-secao" aria-label="Serviços realizados">
+    <h2>Os nossos serviços</h2>
+    <div class="servicos-grid">
+        <h5>Aparar abrigos</h5>
+        <h5>Manutenção de jardins</h5>
+        <h5>Cortar relvas e fazer canteiros</h5>
+        <h5>Podas de árvores</h5>
+        <h5>Plantações de flores, Plantas e Canteiros 🌷🌹</h5>
+    </div>
+    <h3>Outras especialidades</h3>
+    <div class="servicos-grid servicos-grid-secundaria">
+        <h5>Serviços de pintura</h5>
+        <h5>Serviços de pedreiro</h5>
+    </div>
+</section>
+<!-- Modal -->
+<div id="galeraModal" class="modal-galeria">
+    <span class="fechar-modal" onclick="fecharModal()">&times;</span>
+    <img class="modal-content" id="imgModal" src="" alt="">
+    <div class="modal-legenda" id="legenda"></div>
+    <a class="anterior" onclick="mudarImagem(-1)">&#10094;</a>
+    <a class="proxima" onclick="mudarImagem(1)">&#10095;</a>
+</div>
+            
+        </div>
+      </section>
+    <script src=js/script.js></script>
+</body>
+</html> 
+  

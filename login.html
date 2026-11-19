@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar / Criar Conta - José Adriano Garden</title>
+  <link rel="stylesheet" href="css/Estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="inicio.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="text">Início</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="trabalhos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-tree"></i>
+                        </span>
+                        <span class="text">Trabalhos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="sobreNos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+                        <span class="text">Sobre Nós</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="contactos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span class="text">Contactos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="avaliacao.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </span>
+                        <span class="text">Avaliação</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="loja.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-shop"></i>
+                        </span>
+                        <span class="text">Loja</span>
+                    </a>
+                </li>
+                <li class="list login-button active">
+                    <a href="login.html">
+                        <span class="icon"></span>
+                        <span class="text">Iniciar Sessão</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="indicator"></div>
+        </div>
+        <div class="home">
+            <h1>Entrar ou Criar Conta</h1>
+            <section class="auth-section">
+                <div class="auth-card">
+                    <div id="authForms">
+                        <div class="auth-tabs">
+                            <button id="tabLogin" class="auth-tab active" type="button">Entrar</button>
+                            <button id="tabRegister" class="auth-tab" type="button">Criar Conta</button>
+                        </div>
+                        <form id="loginForm" class="auth-form active">
+                            <div class="form-grupo">
+                                <label for="loginEmail">Email</label>
+                                <input type="email" id="loginEmail" name="loginEmail" placeholder="email@exemplo.com" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="loginPassword">Senha</label>
+                                <input type="password" id="loginPassword" name="loginPassword" placeholder="Senha" minlength="8" required>
+                            </div>
+                            <button type="submit" class="btn-enviar">Entrar</button>
+                            <div class="auth-divider"><span>ou</span></div>
+                            <div class="auth-social">
+                                <a href="/auth/google" class="btn-social btn-google"><i class="fa-brands fa-google"></i> Entrar com Google</a>
+                                <button id="facebookLogin" type="button" class="btn-social btn-facebook"><i class="fa-brands fa-facebook-f"></i> Entrar com Facebook</button>
+                            </div>
+                        </form>
+                        <form id="registerForm" class="auth-form">
+                            <div class="form-grupo">
+                                <label for="registerName">Nome</label>
+                                <input type="text" id="registerName" name="registerName" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="registerEmail">Email</label>
+                                <input type="email" id="registerEmail" name="registerEmail" placeholder="email@exemplo.com" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="registerPassword">Senha</label>
+                                <input type="password" id="registerPassword" name="registerPassword" placeholder="Senha (mínimo 8 caracteres)" minlength="8" maxlength="128" required>
+                            </div>
+                            <div class="form-grupo">
+                                <label for="registerConfirm">Confirmar Senha</label>
+                                <input type="password" id="registerConfirm" name="registerConfirm" placeholder="Repita a senha" required>
+                            </div>
+                            <button type="submit" class="btn-enviar">Criar Conta</button>
+                        </form>
+                    </div>
+                    <div id="accountInfo" class="auth-account hidden">
+                        <p>Bem-vindo, <span id="accountName"></span></p>
+                        <button id="logoutButton" class="btn-enviar" type="button">Sair</button>
+                    </div>
+                    <p id="authMessage" class="auth-message"></p>
+                    <p id="googleAuthStatus" class="google-auth-status"></p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

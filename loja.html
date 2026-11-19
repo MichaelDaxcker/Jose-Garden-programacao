@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <link rel="stylesheet" href="css/Estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="pagina-loja">
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <a href="inicio.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="text">Início</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="trabalhos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-tree"></i>
+                        </span>
+                        <span class="text">Trabalhos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="sobreNos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-users"></i>
+                        </span>
+                        <span class="text">Sobre Nós</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="contactos.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <span class="text">Contactos</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="avaliacao.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </span>
+                        <span class="text">Avaliação</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <a href="loja.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-shop"></i>
+                        </span>
+                        <span class="text">Loja</span>
+                    </a>
+                </li>                <li class="list login-button">
+                    <a href="login.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-right-to-bracket"></i>
+                        </span>
+                        <span class="text">Iniciar Sessão</span>
+                    </a>
+                </li>            </ul>
+            <div class="indicator"></div>
+        </div>
+        <div class="home">
+            <h1 class="text-3d-1">Loja de Plantas e Jardim 🌱</h1>
+        </div>
+
+    <main class="loja-conteudo">
+        <p class="loja-introducao">
+            <i class="fa-solid fa-leaf loja-introducao-folha" aria-hidden="true"></i>
+            <span>Encontre plantas, ferramentas e artigos para o seu jardim nos anúncios publicados pelos administradores.</span>
+            <i class="fa-solid fa-seedling loja-introducao-folha" aria-hidden="true"></i>
+        </p>
+
+        <section id="secaoPublicarAnuncio" class="anuncio-publicar" aria-labelledby="titulo-publicar" hidden>
+            <h2 id="titulo-publicar">Publicar um anúncio</h2>
+            <form id="formAnuncio" class="form-anuncio" hidden>
+                <p class="anuncio-aviso">Preencha os dados do produto. O telefone e o email indicados ficarão visíveis publicamente no anúncio; preencha pelo menos um.</p>
+                <div class="form-anuncio-campos">
+                    <div class="form-grupo">
+                        <label for="anuncioVendedor">O seu nome</label>
+                        <input id="anuncioVendedor" name="vendedor" type="text" minlength="2" maxlength="80" autocomplete="name" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="anuncioTitulo">Nome do produto</label>
+                        <input id="anuncioTitulo" name="titulo" type="text" minlength="3" maxlength="80" placeholder="Ex.: Oliveira em vaso" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="anuncioCategoria">Categoria</label>
+                        <select id="anuncioCategoria" name="categoria" required>
+                            <option value="">Escolha uma categoria</option>
+                            <option value="Plantas">Plantas</option>
+                            <option value="Sementes">Sementes</option>
+                            <option value="Ferramentas">Ferramentas</option>
+                            <option value="Vasos e decoração">Vasos e decoração</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="anuncioPreco">Preço (€)</label>
+                        <input id="anuncioPreco" name="preco" type="number" min="0" max="99999999" step="0.01" placeholder="0,00" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="anuncioTelefone">Telemóvel</label>
+                        <input id="anuncioTelefone" name="telefone" type="tel" maxlength="30" autocomplete="tel" placeholder="Ex.: 912 345 678">
+                    </div>
+                    <div class="form-grupo">
+                        <label for="anuncioEmail">Email</label>
+                        <input id="anuncioEmail" name="email" type="email" maxlength="120" autocomplete="email" placeholder="Ex.: nome@exemplo.pt">
+                    </div>
+                    <div class="form-grupo form-anuncio-fotografia">
+                        <label for="anuncioImagem">Fotografia (opcional)</label>
+                        <input id="anuncioImagem" name="fotografia" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+                        <span class="anuncio-aviso">Escolha uma fotografia da galeria ou do dispositivo (máximo 5 MB).</span>
+                        <div id="previaFotografiaAnuncio" class="previa-fotografia-anuncio" hidden>
+                            <img id="imagemPreviaAnuncio" alt="Pré-visualização da fotografia do anúncio">
+                            <button id="removerFotografiaAnuncio" class="anuncio-ver-detalhes" type="button">Remover fotografia</button>
+                        </div>
+                    </div>
+                    <div class="form-grupo form-anuncio-descricao">
+                        <label for="anuncioDescricao">Descrição</label>
+                        <textarea id="anuncioDescricao" name="descricao" rows="4" minlength="10" maxlength="1000" placeholder="Descreva o produto e o seu estado..." required></textarea>
+                    </div>
+                </div>
+                <button class="btn-enviar" type="submit">Publicar anúncio</button>
+                <p id="resultadoAnuncio" class="resultado-anuncio" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="anuncios-secao" aria-labelledby="titulo-anuncios">
+            <div class="anuncios-cabecalho">
+                <div>
+                    <h2 id="titulo-anuncios">Anúncios à venda</h2>
+                    <p>Produtos publicados pela comunidade</p>
+                </div>
+                <label class="pesquisa-anuncios">
+                    <span class="sr-only">Pesquisar anúncios</span>
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input id="pesquisaAnuncios" type="search" placeholder="Pesquisar produtos..." autocomplete="off">
+                </label>
+            </div>
+            <p id="resultadoExclusaoAnuncio" class="resultado-exclusao-anuncio" role="status" aria-live="polite"></p>
+            <div id="listaAnuncios" class="lista-anuncios" aria-live="polite">
+                <p class="anuncios-estado">A carregar anúncios...</p>
+            </div>
+        </section>
+        <dialog id="detalhesAnuncio" class="detalhes-anuncio-modal" aria-labelledby="detalhesAnuncioTitulo">
+            <div class="detalhes-anuncio-cabecalho">
+                <h2 id="detalhesAnuncioTitulo">Detalhes do anúncio</h2>
+                <form method="dialog">
+                    <button class="fechar-detalhes-anuncio" type="submit" aria-label="Fechar detalhes">&times;</button>
+                </form>
+            </div>
+            <div id="detalhesAnuncioConteudo" class="detalhes-anuncio-conteudo"></div>
+        </dialog>
+    </main>
+
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/loja.js"></script>
+</body>
+</html>
